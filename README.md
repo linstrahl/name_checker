@@ -72,7 +72,7 @@ pip install -r requirements.txt
 #### Linux / macOS
 ```bash
 # Make sure your virtual environment is activated, then run:
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### 4. Run the Application
@@ -121,16 +121,6 @@ chmod +x env/bin/activate
     Input      : Jane Smyth
     Similarity : 0.92
 ❌ 3 | 555555 | Michael Lee → Data not found in master file!
-```
-
-# 📋 Requirements
-
-The `requirements.txt` file should contain:
-```
-streamlit>=1.0.0
-python-Levenshtein>=0.12.0
-fuzzywuzzy>=0.18.0
-pandas>=1.3.0
 ```
 
 # 📝 License
