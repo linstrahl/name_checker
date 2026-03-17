@@ -35,24 +35,32 @@
     ```
 
 2. (Optional but recommended) Create a virtual environment
+   Windows
    ```bash
    python -m venv env # rename 'env' as what you want
    source env/Scripts/activate
    or
    . env/Scripts/activate
    ```
+   MacOS/Linux
+   ```bash
+   python3 -m venv env # rename 'env' as what you want
+   source env/bin/activate
+   or
+   . env/bin/activate
+   ```
 
-3. Install dependency
+4. Install dependency
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Run the app
+5. Run the app
     ```bash
     streamlit run name_checker.py
     ```
 
-5. Open your browser at 
+6. Open your browser at 
     ```bash
     http://localhost:8501
     ```
