@@ -28,53 +28,111 @@
 
 
 # 🚀 How to Run
-1. Clone repository
-    ```bash
-    git clone https://github.com/linstrahl/name_checker.git
-    cd name_checker
-    ```
 
-2. (Optional but recommended) Create a virtual environment
-   Windows
-   ```bash
-   python -m venv env # rename 'env' as what you want
-   source env/Scripts/activate
-   or
-   . env/Scripts/activate
-   ```
-   MacOS/Linux
-   ```bash
-   python3 -m venv env # rename 'env' as what you want
-   source env/bin/activate
-   or
-   . env/bin/activate
-   ```
+## Prerequisites
+- Python 3.7 or higher
+- pip (Python package manager)
 
-4. Install dependency
-    ```bash
-    pip install -r requirements.txt
-    ```
+## Installation Steps
 
-5. Run the app
-    ```bash
-    streamlit run name_checker.py
-    ```
+### 1. Clone the Repository
+```bash
+git clone https://github.com/linstrahl/name-checker.git
+cd name-checker
+```
 
-6. Open your browser at 
-    ```bash
-    http://localhost:8501
-    ```
+### 2. Create a Virtual Environment (Recommended)
+
+#### Windows
+```bash
+# Create virtual environment
+python -m venv env
+
+# Activate virtual environment
+env\Scripts\activate
+```
+
+#### Linux / macOS
+```bash
+# Create virtual environment
+python3 -m venv env
+
+# Activate virtual environment
+source env/bin/activate
+```
+
+### 3. Install Dependencies
+
+#### Windows
+```bash
+# Make sure your virtual environment is activated, then run:
+pip install -r requirements.txt
+```
+
+#### Linux / macOS
+```bash
+# Make sure your virtual environment is activated, then run:
+pip install -r requirements.txt
+```
+
+### 4. Run the Application
+
+#### Windows
+```bash
+streamlit run name_checker.py
+```
+
+#### Linux / macOS
+```bash
+streamlit run name_checker.py
+```
+
+### 5. Access the Application
+Open your web browser and navigate to:
+```
+http://localhost:8501
+```
+
+## Troubleshooting
+
+**Windows users:** If you encounter issues activating the virtual environment, try:
+```bash
+. env/Scripts/activate
+```
+
+**Linux/macOS users:** If you get a permission error, ensure the activate script is executable:
+```bash
+chmod +x env/bin/activate
+```
 
 # 📊 Example Output
-- Summary
-  - ✅ Total matches: 15
-  - ❌ Total not matched: 3
-- Detailed results
-    ```yaml
-    ✅ 1 | 123456 | ✔ Match: (Master)👉🏼 John Doe => (Input)👉🏼 John Doe
-    ❗ 2 | 987654 | ❌ Does not match:
-        Master     : Jane Smith
-        Input      : Jane Smyth
-        Similarity : 0.92
-    ❌ 3 | 555555 | Michael Lee → Data not found in master file!
-    ```
+
+### Summary
+```
+✅ Total matches: 15
+❌ Total not matched: 3
+```
+
+### Detailed Results
+```
+✅ 1 | 123456 | ✔ Match: (Master)👉🏼 John Doe => (Input)👉🏼 John Doe
+❗ 2 | 987654 | ❌ Does not match:
+    Master     : Jane Smith
+    Input      : Jane Smyth
+    Similarity : 0.92
+❌ 3 | 555555 | Michael Lee → Data not found in master file!
+```
+
+# 📋 Requirements
+
+The `requirements.txt` file should contain:
+```
+streamlit>=1.0.0
+python-Levenshtein>=0.12.0
+fuzzywuzzy>=0.18.0
+pandas>=1.3.0
+```
+
+# 📝 License
+
+This project is open source and available under the MIT License.
